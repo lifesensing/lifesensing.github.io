@@ -1,0 +1,52 @@
+baseURL = 'https://lifesensing.github.io/'
+languageCode = 'zh-CN'
+title = '无墨书'
+theme="hugo-book-personalized"
+
+## 保持分类的原始名字（false会做转小写处理）
+preserveTaxonomyNames = true
+
+## 是否禁止URL Path转小写
+disablePathToLower = true
+
+## 自动检测是否包含中文/日文/韩文，建议设置为true
+hasCJKLanguage = true
+
+## 摘要长度
+summaryLength = 140
+
+## 分页
+pagination.pagerSize = 10
+papagination.pathginatePath = "page"
+
+[author]
+name = "lifesensing"
+
+[params]
+  author = "lifesensing"
+  # 是否开启本地搜索
+  BookSection = 'docs'
+  BookSearch = true
+  localSearch = true
+  BookDateFormat = '2006-01-02 Mon 15:04:05 UTC-07'
+
+[markup]
+  [markup.tableOfContents]
+    # 纳入目录的最小标题级别，默认为3
+    endLevel = 6
+    # 是否排序，其实就是是否在目录的前面添加序号“1. ”、"2. "等等
+    ordered = false
+    # 纳入目录的最大标题级别，默认为2
+    startLevel = 1
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
+[module]
+  [[module.mounts]]
+    disableWatch = false
+    lang = ''
+    source = 'Blog'
+    target = 'content'
+    excludeFiles = '/Templates'
