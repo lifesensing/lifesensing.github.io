@@ -50,14 +50,14 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: lifesensing/hugo-book-personalized
-          ref: themes/hugo-book-personalized
+          path: themes/hugo-book-personalized
 
       - name: Checkout Blog
         uses: actions/checkout@v4
         with:
           ssh-key: ${{ secrets.FORBLOGREADONLY }}
           repository: lifesensing/Blog
-          ref: Blog
+          path: Blog
                
       - name: Setup Pages
         id: pages
